@@ -7,7 +7,7 @@
 
 set -e
 
-image="netologist/yq"
+image="hasanozgan/yq"
 
 docker build --no-cache -t ${image}:latest .
 

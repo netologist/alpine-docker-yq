@@ -1,6 +1,7 @@
 name: Docker
 
 on:
+  workflow_dispatch:
   push:
     tags: ["*"]
     branches:
@@ -15,7 +16,7 @@ env:
   # Hostname of your registry
   REGISTRY: docker.io
   # Image repository, without hostname and tag
-  IMAGE_NAME: netologist/yq
+  IMAGE_NAME: hasanozgan/yq
   SHA: ${{ github.event.pull_request.head.sha || github.event.after }}
 
 jobs:
