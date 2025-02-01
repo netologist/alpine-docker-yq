@@ -1,11 +1,10 @@
 FROM alpine
 
 RUN apk fix && \
-    apk --no-cache --update add git git-lfs gpg less openssh patch perl && \
-    git lfs install
+    apk --no-cache --update add yq
 
-VOLUME /git
-WORKDIR /git
+VOLUME /opt
+WORKDIR /opt
 
-ENTRYPOINT ["git"]
+ENTRYPOINT ["yq"]
 CMD ["--help"]

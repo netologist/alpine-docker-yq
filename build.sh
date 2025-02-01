@@ -7,7 +7,7 @@
 
 set -e
 
-image="alpine/git"
+image="netologist/yq"
 
 docker build --no-cache -t ${image}:latest .
 
